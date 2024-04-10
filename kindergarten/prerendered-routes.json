@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/Interface",
+    "/Interface/addNewMaterial",
+    "/Interface/addNewSupplier",
+    "/Interface/BasicMenu",
+    "/Interface/Class",
+    "/Interface/Material",
+    "/Interface/permissions",
+    "/Interface/Staff",
+    "/Interface/Supplier",
+    "/Login"
+  ]
+}
