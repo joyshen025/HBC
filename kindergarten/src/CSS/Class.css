@@ -1,0 +1,164 @@
+.tab-title {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.tab-content {
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.classRow {
+    max-width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+h5 {
+    font-size: x-large;
+    font-weight: bold;
+    margin: 0;
+}
+
+label {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    align-items: end;
+}
+
+.card-content hr {
+    margin: 0;
+}
+
+.classData {
+    padding: 10px;
+}
+
+.classBtn {
+    justify-content: flex-end;
+    display: flex;
+    padding: 10px;
+}
+
+.classBtn button {
+    margin-left: 5px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.classEditBtn {
+    background: linear-gradient(to bottom, #77dd77a8, #55aa55a8);
+}
+
+.classEditBtn:hover {
+    background: linear-gradient(to bottom, #55aa55a8, #77dd77a8);
+}
+
+.classEditBtn:active {
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.deleteBtn {
+    background: linear-gradient(to bottom, #ff6666a8, #cc3333a8);
+}
+
+.deleteBtn:hover {
+    background: linear-gradient(to bottom, #cc3333a8, #ff6666a8);
+}
+
+.deleteBtn:active {
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[readonly] {
+    background-color: #e6e5e5;
+    color: #000000;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #808080;
+}
+
+
+.addButton {
+    border: none;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    color: #000000 !important;
+}
+
+.addButton:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: #000000;
+}
+
+.addButton:active {
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #000000;
+}
+
+.modal-body input {
+    border: 1.5px solid #949494;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn:focus{
+    box-shadow: none;
+}
+
+.confirm-model{
+    max-width: 250px !important;
+}
+
+.confirm-model .modal-footer button{
+    color: #fff ;
+}
+
+.totalPeople {
+    font-weight: bold;
+    font-size: x-large;
+    color: rgb(202, 73, 95); 
+}
+

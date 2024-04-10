@@ -1,0 +1,106 @@
+<div class="tab-content" id="v-pills-tabContent">
+  <div class="tab-pane fade show active" id="class-management" role="tabpanel" aria-labelledby="class-management-tab">
+    <div class="tab-title">
+      <p>班級管理</p>
+    </div>
+    <hr>
+    <div class="classCards">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col" *ngFor="let item of class" [id]="item.id">
+          <div class="card h-100">
+            <div class="card-content">
+              <div class="card-title">
+                <h5 *ngIf="!item.isEdit" class="className">{{item.className}} </h5>
+                <h5 *ngIf="item.isEdit" class="className"><input class="classNameInput" type="text"
+                    [(ngModel)]="item.className"></h5>
+                <p>班級總人數：<span class="totalPeople">{{ calculateTotal(item) }}</span></p>
+              </div>
+              <hr>
+              <div class="classData">
+                <div class="classRow">
+                  <label for="">負責導師：</label>
+                  <input *ngIf="!item.isEdit" type="text" readonly value="{{item.teacher}}">
+                  <input *ngIf="item.isEdit" type="text" [(ngModel)]="item.teacher">
+                </div>
+                <div class="classRow">
+                  <label for="">大班段人數：</label>
+                  <input *ngIf="!item.isEdit" type="text" readonly value="{{item.bigClass}}">
+                  <input *ngIf="item.isEdit" type="text" [(ngModel)]="item.bigClass"
+                    (ngModelChange)="item.bigClass = $event || 0">
+                </div>
+                <div class="classRow">
+                  <label for="">中班段人數：</label>
+                  <input *ngIf="!item.isEdit" type="text" readonly value="{{item.middleClass}}">
+                  <input *ngIf="item.isEdit" type="text" [(ngModel)]="item.middleClass"
+                    (ngModelChange)="item.middleClass = $event || 0">
+                </div>
+                <div class="classRow">
+                  <label for="">小班段人數：</label>
+                  <input *ngIf="!item.isEdit" type="text" readonly value="{{item.smallClass}}">
+                  <input *ngIf="item.isEdit" type="text" [(ngModel)]="item.smallClass"
+                    (ngModelChange)="item.smallClass = $event || 0">
+                </div>
+              </div>
+              <hr>
+              <div class="classBtn">
+                <button *ngIf="!item.isEdit" class="classEditBtn" (click)="startEditing(item)">編輯</button>
+                <button *ngIf="item.isEdit" class="classEditBtn" (click)="updateClassData(item)">保存</button>
+                <button class="deleteBtn" (click)="deleteClass(item)">刪除</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <button type="button" class="btn addButton bg-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">+
+          </button>
+
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+
+
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">新增班級</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="classData">
+                    <div class="classRow">
+                      <label for="">班級名稱：</label>
+                      <input type="text" [(ngModel)]="classNameValue">
+                    </div>
+                    <div class="classRow">
+                      <label for="">負責導師：</label>
+                      <input type="text" [(ngModel)]="teacherValue">
+                    </div>
+                    <div class="classRow">
+                      <label for="">大班段人數：</label>
+                      <input type="text" [(ngModel)]="bigClassValue">
+                    </div>
+                    <div class="classRow">
+                      <label for="">中班段人數：</label>
+                      <input type="text" [(ngModel)]="middleClassValue">
+                    </div>
+                    <div class="classRow">
+                      <label for="">小班段人數：</label>
+                      <input type="text" [(ngModel)]="smallClassValue">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary" (click)="addclass()">新增</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

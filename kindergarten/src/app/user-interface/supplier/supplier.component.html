@@ -1,0 +1,51 @@
+<div class="tab-content" id="v-pills-tabContent">
+  <div class="tab-pane fade show active" id="class-management" role="tabpanel" aria-labelledby="class-management-tab">
+    <div class="tab-title">
+      <p>合作廠商</p>
+    </div>
+    <hr>
+
+    <div>
+      <a [routerLink]="['/Interface/addNewSupplier']" routerLinkActive="router-link-active"  class="addNewBtn">新增</a>
+    </div>
+
+
+
+    <div class="Tables">
+      <table id="example" class="display" style="width:100%" >
+        <thead>
+          <tr>
+            <th>廠商名稱</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="width: 10%;">協榮</td>
+            <td style="width: 10%;">
+              <div><span>地址</span></div>
+              <div>電話</div>
+              <div>統編</div>
+              <div>備註</div>
+            </td>
+            <td>
+              <div>新竹縣新豐鄉圓山子116之13</div>
+              <div>0905062425</div>
+              <div>90847470</div>
+              <div>無補充</div>
+            </td>
+            <td style="width: 8%;">
+              <div class="tableBtn">
+                <a class="editBtn">編輯</a>
+                <a class="deleteBtn">刪除</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+

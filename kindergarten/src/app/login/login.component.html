@@ -1,0 +1,11 @@
+<div class="body">
+  <div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <input type="text" name="username" placeholder="使用者名稱" [(ngModel)]="username">
+      <input type="password" name="password" placeholder="密碼" autocomplete="current-password" [(ngModel)]="password">
+      <p class="failureMessage" *ngIf="showErrorMessage">帳號密碼錯誤</p>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>

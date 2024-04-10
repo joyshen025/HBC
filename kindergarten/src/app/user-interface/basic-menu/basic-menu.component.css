@@ -1,0 +1,92 @@
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8d7da;
+  min-height: 100vh;
+  display: flex;
+}
+
+input {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.sidebar {
+  background: linear-gradient(to top right, #ff9966, #ff5e62);
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  padding: 30px;
+}
+
+.meun {
+  width: 200px;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: transparent !important;
+  border: none !important;
+  color: #ffffff;
+  font-size: large;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+  text-decoration: none;
+  background-color: #da1e37 !important;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link.active.menu-item {
+  background-color: #da1e37 !important;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link.menu-item:focus {
+  outline: none;
+}
+
+#v-pills-home-tab {
+  padding: 20px;
+  margin: 0;
+}
+
+.hr-bold {
+  background-color: #fff;
+  margin: 10px 0;
+}
+
+
+
+.align-items-start {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.nav-pills{
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home{
+  font-size: x-large;
+}
+
